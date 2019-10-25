@@ -7,7 +7,7 @@ export default class extends PureComponent {
   render() {
     return (
       <React.Fragment>
-        <Os></Os>
+        <Os />
         <Footer />
       </React.Fragment>
     )

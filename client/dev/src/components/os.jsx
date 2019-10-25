@@ -12,8 +12,10 @@ class App extends PureComponent {
     return (
       <React.Fragment>
         <Button>clicked</Button>
+        <Button>{ process.env.NODE_ENV }</Button>
       </React.Fragment>
     );
   }
 }
+
 export default App;

@@ -1,10 +1,12 @@
 {
   "name": "upx",
   "version": "1.0.0",
-  "description": "web调试",
+  "description": "dev",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'hello world'"
+    "dep": "cnpm i && cd client && cnpm i",
+    "dev:client": "cd client/dev && PORT=2334 && npm start",
+    "dev:serve": "node server"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,10 @@
   },
   "homepage": "https://github.com/luxizhizhong/upx#readme",
   "dependencies": {
-    "koa": "^2.10.0"
+    "@koa/cors": "^2.2.3",
+    "@koa/router": "^8.0.2",
+    "colors": "^1.4.0",
+    "koa": "^2.10.0",
+    "sinsay": "^1.2.4"
   }
 }
