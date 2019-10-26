@@ -8,11 +8,10 @@ const json = require('koa-json')
 // router
 const Api = require('./router')
 
-app.use(Api.routes(), Api.allowedMethods())
-
 // middleware
 app.use(json())
 app.use(logger())
 app.use(cors())
+app.use(Api.routes(), Api.allowedMethods())
 
 module.exports = app
