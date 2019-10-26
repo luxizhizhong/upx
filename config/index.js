@@ -8,14 +8,5 @@ module.exports = {
     clientDevPort,
     serverDevPort,
     isDev
-  },
-  request: nextFlag=> {
-    // @param <Boolean> - nextFlag
-    // @return <function()>
-    let rx
-    if (nextFlag) {
-      rx = require('./request/client')
-    } else rx = require('./request/server')
-    return rx
   }
 }
