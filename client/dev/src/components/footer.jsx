@@ -8,7 +8,7 @@ import {
 
 const oldYear = 2019
 const now = (new Date()).getFullYear()
-const formatTimeText =  oldYear == now ? now : `${ oldYear } - ${ now }`
+const formatTimeText =  oldYear === now ? now : `${ oldYear } - ${ now }`
 const createGithubUrl = user=> `https://github.com/${ user }` 
 
 const ORG = `luxizhizhong`
