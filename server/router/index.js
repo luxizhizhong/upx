@@ -1,16 +1,20 @@
 const Router = require('@koa/router')
+const prefix = '/api'
+const Api = new Router({ prefix })
 
-const Api = new Router({
-  prefix: '/api'
-})
+const OS = require('./os')
 
-Api.use( async ctx=> {
+Api
+  .get('/', async ctx=> {
+    ctx.body = '/doc'
+  })
+  .get('/os', OS)
+
+Api.use( async (ctx, next)=> {
   ctx.body = {
     code: 404,
     msg: '未知错误'
   }
 })
-
-Api.use('/os')
 
 module.exports = Api

@@ -41,9 +41,6 @@ const OS = {
   userInfo: os.userInfo()
 }
 
-console.log(OS)
-
-module.exports = async (ctx, next)=> {
+module.exports = async ctx=> {
   ctx.body = OS
-  next()
 }
