@@ -26,6 +26,9 @@
     "@koa/router": "^8.0.2",
     "colors": "^1.4.0",
     "koa": "^2.10.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "network": "^0.4.1",
     "sinsay": "^1.2.4"
   }
 }

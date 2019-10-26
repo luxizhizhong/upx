@@ -3,6 +3,12 @@ import {
   Button
 } from 'react-weui'
 
+require('./api')
+
+(()=> {
+
+})()
+
 class App extends PureComponent {
   constructor(props) {
     super(props);
