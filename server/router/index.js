@@ -1,3 +1,4 @@
+const path = require('path')
 const Router = require('@koa/router')
 const prefix = '/api'
 const Api = new Router({ prefix })
@@ -6,9 +7,9 @@ const OS = require('./os')
 
 Api
   .get('/', async ctx=> {
-    ctx.body = '/doc'
+    ctx.body = '/docs'
   })
-  .get('/os', OS)
+  .use('/os', OS.routes(), OS.allowedMethods())
 
 Api.use( async (ctx, next)=> {
   ctx.body = {

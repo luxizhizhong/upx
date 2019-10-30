@@ -3,15 +3,18 @@ import {
   Cells,
   Cell,
   CellsTitle,
-  CellHeader,
   CellBody,
-  CellFooter
+  CellFooter,
+  Label,
+  CellHeader,
+  Input,
+  Button
 } from 'react-weui'
+import '../css/toggle.css'
+import Toggle from 'react-toggle'
 
-
-const imgWrapStyle = {
-  width: '8vw',
-  height: '10vh',
+const WrapStyle = {
+  height: 'auto',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -29,10 +32,16 @@ const imgWrapStyle = {
   lineHeight: '1.5',
   userSelect: 'none',
   transition: 'color .3s ease,background-color .3s ease,border .3s ease',
-  // boxSizing: 'border-box',
-  color: '#8f8f8f',
+  color: '#1AAD19',
   backgroundColor: '#fcfcfc',
-  borderColor: '#c0b0ff'
+  borderColor: '#1AAD19'
+}
+
+const borderWrap = {
+  border: '2px solid #1AAD19',
+  padding: '12px',
+  margin: '24px',
+  borderRadius: "12px"
 }
 
 class HttpServer extends Component {
@@ -40,33 +49,65 @@ class HttpServer extends Component {
     super(props);
     this.state = {}
   }
+
   render() {
     return (
       <React.Fragment>
-        <CellsTitle>List with description</CellsTitle>
-        <Cells>
-          <Cell>
-            <CellBody>
-              <Cells>
-                <Cell>
-                  <CellBody>
-                    路径
-                  </CellBody>
-                  <CellFooter>
-                    233
-                  </CellFooter>
-                </Cell>
-              </Cells>
-            </CellBody>
-            <CellFooter>
-              <div style={ imgWrapStyle }>
-                { true ? (
-                  <span>选择目录➕</span>
-                ) : null }
-              </div>
-            </CellFooter>
-          </Cell>
-        </Cells>
+        <div style={ borderWrap }>
+          <CellsTitle>http://localhost:{3000}</CellsTitle>
+          <Cells>
+            <Cell>
+              <CellBody>
+                <Cells>
+                  <Cell>
+                    <CellHeader>
+                      <Label>路径</Label>
+                    </CellHeader>
+                    <CellBody>
+                      <Input />
+                    </CellBody>
+                  </Cell>
+                </Cells>
+                <Cells>
+                  <Cell>
+                    <CellHeader>
+                      <Label>端口号</Label>
+                    </CellHeader>
+                    <CellBody>
+                      <Input />
+                    </CellBody>
+                  </Cell>
+                </Cells>
+                <Cells>
+                  <Cell>
+                    <CellHeader>
+                      <Label>备注</Label>
+                    </CellHeader>
+                    <CellBody>
+                      <Input />
+                    </CellBody>
+                  </Cell>
+                </Cells>
+                <Cells>
+                  <Cell>
+                    <CellBody>
+                      <div>
+                        <Toggle /> <span>{true ? '开启服务' : '关闭服务'}</span>
+                        <Button type="warn" size="small" style={{ marginLeft: '24px' }}>删除服务</Button>
+                      </div>
+                    </CellBody>
+                  </Cell>
+                </Cells>
+              </CellBody>
+              <CellFooter>
+                <div style={ WrapStyle }>
+                  fs文件系统
+                </div>
+              </CellFooter>
+            </Cell>
+          </Cells>
+        </div>
+        <Button>添加</Button>
       </React.Fragment>
     );
   }

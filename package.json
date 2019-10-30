@@ -29,6 +29,8 @@
     "koa-json": "^2.0.2",
     "koa-logger": "^3.2.1",
     "network": "^0.4.1",
-    "sinsay": "^1.2.4"
+    "path-type": "^4.0.0",
+    "sinsay": "^1.2.4",
+    "tcp-port-used": "^1.0.1"
   }
 }

@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import {
-  Page,
   Cells,
   Cell,
   CellBody,
@@ -24,7 +23,6 @@ class App extends PureComponent {
 
   updateDataOS = async () => {
     const osInfo = await getOS()
-    console.log(osInfo)
     this.setState({ osInfo })
   }
   render() {
