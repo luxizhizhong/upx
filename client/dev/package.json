@@ -10,6 +10,7 @@
     "react-toggle": "^4.1.1",
     "react-weui": "^1.2.2",
     "styled-components": "^4.4.0",
+    "throttle-debounce": "^2.1.0",
     "weui": "^1.1.0"
   },
   "scripts": {
