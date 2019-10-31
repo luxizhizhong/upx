@@ -6,7 +6,7 @@
   "scripts": {
     "dep": "cnpm i && cd client && cnpm i",
     "dev:client": "cd client/dev && PORT=2334 && npm start",
-    "dev:serve": "node server"
+    "dev:serve": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
