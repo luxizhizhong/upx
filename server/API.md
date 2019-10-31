@@ -39,6 +39,27 @@ Root Router: `/api`
 {
     "code": 200,
     "msg": "success",
-    "check": "/Users/kozo4/cat"
+    "check": "/Users/kozo4/cat" // pwd 错误会返回 false
+}
+```
+
+> /os/port
+
+- querystring
+
+```json
+{
+  "type": "check",
+  "port": 2333 // 隐式转换后 `Number`
+}
+```
+
+- result
+
+```json
+{
+  "code": 200,
+  "msg": "success",
+  "used": true
 }
 ```
