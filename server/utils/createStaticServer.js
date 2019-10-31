@@ -18,14 +18,14 @@ App.use(cors())
 ** @param <String> - staticPath
 ** @return <Promise>
 */
-module.exports = async (port, staticPath)=> new Promise((rcv, rjt)=> {
+module.exports = (port, staticPath)=> new Promise( async (rcv, rjt)=> {
   let isUsedPort = await checkUsedPort(port)
   isUsedPort = !isUsedPort
   App.use(static(staticPath))
   if (isUsedPort) {
     App.listen(port, ()=>{
       rcv(App)
-      App.close()
+      // App.close()
     })
   } else rcv(false)
 })
