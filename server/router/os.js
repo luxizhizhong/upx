@@ -3,8 +3,8 @@ const os = require('os')
 const Router = require('@koa/router')
 const Api = new Router()
 
-const pathUtils = require('../../utils/path')
-const checkUsedPort = require('../../utils/checkUsedPort')
+const pathUtils = require('../utils/path')
+const checkUsedPort = require('../utils/checkUsedPort')
 
 const cpus = os.cpus()
 let cpu = cpus[0].model
