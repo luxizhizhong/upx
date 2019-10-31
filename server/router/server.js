@@ -17,11 +17,11 @@ Middle
     if (!isNaN(port)) {
       const App = await createServer(port, path)
       if (App) {
-        // TODO: 返回的句柄该怎么关闭 App.close()
-        // TODO: 尝试使用闭包解决回调
         result.msg = `success`
         result.is = true
-      }
+        result.go = `http://localhost:${ port }`
+        result.path = path
+      } else result.debug = '端口被占用了'
     }
     ctx.body = result
   })
