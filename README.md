@@ -25,11 +25,11 @@
 
 ## Developer
 
-```
+```bash
+
 git clone https://github.com/luxizhizhong/upx6
 cd upx
 
-# 安装依赖(cnpm)
 cnpm run dep
 
 # web端
@@ -40,7 +40,7 @@ cnpm run dev:serve
 
 ```
 
-open browser: http://localhost:2333
+open browser: http://localhost:2334
 
 ![](https://i.loli.net/2019/10/31/ZycE3g82timxWnV.png)
 
