@@ -2,13 +2,11 @@
 
 Root Router: `/api`
 
-# 系统
-
 > /os
 
 - `result`
 
-```json
+```jsonc
 
 {
     "hostName": "chenhongzhoudeMacBook-Air.local",
@@ -26,7 +24,7 @@ Root Router: `/api`
 
 - `querystring`
 
-```json
+```jsonc
 {
   "type": "check",
   "pwd": "/Users/kozo4/cat'
@@ -35,7 +33,7 @@ Root Router: `/api`
 
 - `result`
 
-```json
+```jsonc
 {
     "code": 200,
     "msg": "success",
@@ -47,7 +45,7 @@ Root Router: `/api`
 
 - querystring
 
-```json
+```jsonc
 {
   "type": "check",
   "port": 2333 // 隐式转换后 `Number`
@@ -56,10 +54,43 @@ Root Router: `/api`
 
 - result
 
-```json
+```jsonc
 {
   "code": 200,
   "msg": "success",
   "used": true
+}
+```
+
+> /server/run/:port
+
+- querystring
+
+```jsonc
+{
+  "path": "/Users/kozo4/cat"
+}
+```
+
+- result
+
+```jsonc
+{
+    "code": 200,
+    "msg": "success",
+    "is": true,
+    "go": "http://localhost:10086",
+    "path": "/Users/kozo4/cat/Project/huluxia/web/www"
+}
+```
+
+> /server/kill/:port
+
+- result
+
+```jsonc
+{
+    "code": 200,
+    "msg": "sucess"
 }
 ```

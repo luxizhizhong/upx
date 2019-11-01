@@ -1,6 +1,6 @@
 const Router = require('@koa/router')
 const createServer = require('../utils/createStaticServer')
-
+const killServer = require('../utils/killServer')
 const Middle = new Router()
 
 Middle
@@ -24,6 +24,14 @@ Middle
       } else result.debug = '端口被占用了'
     }
     ctx.body = result
+  })
+  .get('/kill/:port', async ctx=> {
+    const { port } = ctx.params
+    await killServer(port)
+    ctx.body = {
+      code: 200,
+      msg: `sucess`
+    }
   })
 
 module.exports = Middle
