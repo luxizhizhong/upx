@@ -24,9 +24,11 @@
   "dependencies": {
     "@koa/cors": "^2.2.3",
     "@koa/router": "^8.0.2",
+    "clear": "^0.1.0",
     "colors": "^1.4.0",
     "conf": "^6.1.0",
     "cuid": "^2.1.6",
+    "kill-port": "^1.6.0",
     "koa": "^2.10.0",
     "koa-json": "^2.0.2",
     "koa-logger": "^3.2.1",
