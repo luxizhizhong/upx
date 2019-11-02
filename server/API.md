@@ -180,3 +180,27 @@ Postman link: https://www.getpostman.com/collections/7701e4071f622d62b3d6
   }
 }
 ```
+
+> /store/http/change
+
+修改 `http-server`
+
+- querystring
+
+```jsonc
+{
+  "index": 0,
+  "key": "path",
+  "value": "are you ok?"
+}
+```
+
+- result
+
+```jsonc
+{
+    "code": 200,
+    "msg": "success",
+    "key": "note"
+}
+```

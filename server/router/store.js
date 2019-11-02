@@ -1,3 +1,4 @@
+const { atob } = require('abab')
 const Router = require('@koa/router')
 const { httpStore } = require('../store')
 const Api = new Router
@@ -48,6 +49,18 @@ Api
       code: 200,
       msg: 'success',
       now
+    }
+  })
+  .get('/http/change', async ctx=> {
+    let { index, key, value } = ctx.query
+    index = +index
+    await httpStore.change(index, {
+      [key]: value
+    })
+    ctx.body = {
+      code: 200,
+      msg: 'success',
+      key: key
     }
   })
 
