@@ -21,15 +21,12 @@
 
 ```
 
-`upx` 是一个由 `node.js` 编写的 `CLI`, 希望这个小玩意能够给你带来便捷🙂
-
 ## Developer
 
 ```bash
 
-git clone https://github.com/luxizhizhong/upx6
+git clone https://github.com/luxizhizhong/upx
 cd upx
-
 cnpm run dep
 
 # web端
@@ -46,8 +43,14 @@ open browser: http://localhost:2334
 
 ## TODO
 
-- **http-server**
-- 支持 `node.js` 项目
-- 跨域代理 `cors`
-- **支持 `ftp`**
-- 本地 `json-server`
+- [x] **http-server**
+- [ ] 支持 `node.js` 项目[ ]
+- [ ] 跨域代理 `cors`
+- [ ] **支持 `ftp`**
+- [ ] 本地 `json-server`
+
+## changelog
+
+》 2019-11-02
+
+- 完成了 `http-server` 模块
