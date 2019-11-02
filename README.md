@@ -48,5 +48,6 @@ open browser: http://localhost:2334
 
 - **http-server**
 - 支持 `node.js` 项目
+- 跨域代理 `cors`
 - **支持 `ftp`**
 - 本地 `json-server`
