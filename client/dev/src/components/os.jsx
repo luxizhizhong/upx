@@ -6,7 +6,7 @@ import {
   CellFooter,
   Button
 } from 'react-weui'
-import { getOS } from '../api'
+import { get_os as getOS } from '../api'
 
 class App extends PureComponent {
   constructor(props) {
